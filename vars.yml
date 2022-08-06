@@ -11,7 +11,7 @@ packages:
 modules:
   - module: 01_idm_instance
     instance: rhel-idm
-    hostname: idm-server
+    hostname: idm
     version: rhel8
   - module: 02_controller_instance
     instance: controller

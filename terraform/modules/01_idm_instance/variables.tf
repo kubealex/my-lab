@@ -1,13 +1,13 @@
 variable hostname {
   type        = string
   description = "Hostname of the VM"
-  default     = "idm-server"
+  default     = "idm"
 }
 
 variable instance_name {
   type        = string
   description = "Instance name of the VM"
-  default     = "idm-server"
+  default     = "idm"
 }
 
 variable domain {
