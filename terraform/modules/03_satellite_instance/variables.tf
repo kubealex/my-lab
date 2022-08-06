@@ -19,7 +19,7 @@ variable domain {
 variable memory {
   type        = number
   description = "Amount of memory in GBs for the VM"
-  default     = 16
+  default     = 20
 }
 
 variable cpu {
