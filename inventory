@@ -1,0 +1,13 @@
+localhost ansible_connection=local
+
+[controller]
+controller.aapdemo.labs ansible_user=sysadmin ansible_ssh_pass=redhat ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[hub]
+hub.aapdemo.labs ansible_user=sysadmin ansible_ssh_pass=redhat ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[satellite]
+satellite.satellitedemo.labs ansible_user=sysadmin ansible_ssh_pass=redhat ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[sso]
+sso-server.ssodemo.labs ansible_user=sysadmin ansible_ssh_password=redhat ansible_ssh_common_args='-o StrictHostKeyChecking=no'
