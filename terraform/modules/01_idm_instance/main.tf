@@ -24,7 +24,7 @@ resource "libvirt_volume" "kickstart_image_idm_server" {
 
 resource "libvirt_domain" "idm-server" {
   autostart = true
-  name = "idm-server"
+  name = "idm-server-lab"
   memory = var.memory*1024
   vcpu = var.cpu
 
