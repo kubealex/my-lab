@@ -24,7 +24,7 @@ resource "libvirt_volume" "kickstart_image" {
 
 resource "libvirt_domain" "satellite_instance" {
   autostart = true
-  name = satellite-lab
+  name = "satellite-lab"
   memory = var.memory*1024
   vcpu = var.cpu
 

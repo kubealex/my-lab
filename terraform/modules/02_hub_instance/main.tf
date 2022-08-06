@@ -24,7 +24,7 @@ resource "libvirt_volume" "kickstart_image" {
 
 resource "libvirt_domain" "hub" {
   autostart = true
-  name = hub-lab
+  name = "hub-lab"
   memory = var.memory*1024
   vcpu = var.cpu
 
