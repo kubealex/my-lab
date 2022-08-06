@@ -9,7 +9,7 @@ packages:
   - virt-install
   - virt-manager
 modules:
-  - module: 01_idm_server
+  - module: 01_idm_instance
     instance: rhel-idm
     hostname: idm-server
     version: rhel8
