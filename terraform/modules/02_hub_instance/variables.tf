@@ -4,12 +4,18 @@ variable hostname {
   default     = "hub"
 }
 
+variable instance_name {
+  type        = string
+  description = "Instance name of the VM"
+  default     = "hub"
+}
+
 variable domain {
   type        = string
   description = "Domain for the virtual machine fqdn"
   default     = "aapdemo.labs"
 }
- 
+
 variable memory {
   type        = number
   description = "Amount of memory in GBs for the VM"

@@ -4,6 +4,18 @@ variable domain {
   default     = "rh-lab.labs"
 }
 
+variable instance_name {
+  type        = map
+  description = "Instances name for the lab"
+  default     = {
+    "controller" = "controller-lab"
+    "hub" = "hub-lab"
+    "sso" = "sso-lab"
+    "idm" = "idm-lab"
+    "satellite" = "satellite-lab"
+  }
+}
+
 variable libvirt_network {
   type        = string
   description = "Name of libvirt network to be used for the VM"

@@ -24,7 +24,7 @@ resource "libvirt_volume" "kickstart_image" {
 
 resource "libvirt_domain" "sso_instance" {
   autostart = true
-  name = "sso-lab"
+  name = var.instance_name != "" ? var.instance_name : var.hostname
   memory = var.memory*1024
   vcpu = var.cpu
 

@@ -4,6 +4,12 @@ variable hostname {
   default     = "satellite"
 }
 
+variable instance_name {
+  type        = string
+  description = "Instance name of the VM"
+  default     = "satellite"
+}
+
 variable domain {
   type        = string
   description = "Domain for the virtual machine fqdn"
