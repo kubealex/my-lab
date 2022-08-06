@@ -17,7 +17,7 @@ modules:
     instance: controller
     hostname: controller
     version: rhel9
-  - module: 02_controller_instance
+  - module: 02_hub_instance
     instance: automation-hub
     hostname: hub
     version: rhel9    
