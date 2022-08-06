@@ -7,19 +7,19 @@ variable hostname {
 variable domain {
   type        = string
   description = "Domain for the virtual machine fqdn"
-  default     = "idmdemo.labs"
+  default     = "rh-lab.labs"
 }
  
 variable memory {
   type        = number
   description = "Amount of memory in GBs for the VM"
-  default     = 8
+  default     = 2
 }
 
 variable cpu {
   type        = number
   description = "Amount of CPUs for the VM"
-  default     = 4
+  default     = 1
 }
 
 variable kickstart_image_idm_server {
@@ -31,19 +31,19 @@ variable kickstart_image_idm_server {
 variable libvirt_network {
   type        = string
   description = "Name of libvirt network to be used for the VM"
-  default     = "idm-lab"
+  default     = "rh-lab"
 }
 
 variable libvirt_pool {
   type        = string
   description = "Name of libvirt pool to be used for the VM"
-  default     = "idm-lab"
+  default     = "rh-lab"
 }
 
 variable disk_size {
   type        = number
   description = "Size in GBs of root volume for the VM"
-  default     = 40
+  default     = 20
 }
 
 variable os_image_idm_server {

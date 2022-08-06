@@ -9,19 +9,25 @@ packages:
   - virt-install
   - virt-manager
 modules:
-  - module: 01_sso_instance
-    instance: rhel8-sso
-    hostname: sso
-  - module: 01_satellite_instance
+
+  - module: 01_idm_server
+    instance: rhel-idm
+    hostname: idm-server
+    version: rhel8
+  - module: 02_controller_instance
+    instance: controller
+    hostname: controller
+    version: rhel9
+  - module: 02_controller_instance
+    instance: automation-hub
+    hostname: hub
+    version: rhel9    
+  - module: 03_satellite_instance
     instance: rhel8-satellite
     hostname: satellite
     version: rhel8
-  - module: 02_client_instance
-    instance: rhel8
-    hostname: el8-server    
+  - module: 04_sso_instance
+    instance: rhel8-sso
+    hostname: sso
     version: rhel8
-  - module: 02_client_instance
-    instance: rhel9
-    hostname: el9-server
-    version: rhel9    
 domain: rh-lab.labs
