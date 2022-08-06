@@ -34,6 +34,7 @@ module "idm_instance" {
   libvirt_network = var.libvirt_network
   libvirt_pool = var.libvirt_pool
   disk_size = var.disk_size
+  instance_name = var.instance_name["idm"]
 }
 
 module "controller_instance" { 
@@ -45,6 +46,7 @@ module "controller_instance" {
   libvirt_network = var.libvirt_network
   libvirt_pool = var.libvirt_pool
   disk_size = var.disk_size
+  instance_name = var.instance_name["controller"]  
 }
 
 module "hub_instance" { 
@@ -56,6 +58,7 @@ module "hub_instance" {
   libvirt_network = var.libvirt_network
   libvirt_pool = var.libvirt_pool
   disk_size = var.disk_size
+  instance_name = var.instance_name["hub"]
 }
 
 module "satellite_instance" { 
@@ -67,6 +70,7 @@ module "satellite_instance" {
   libvirt_network = var.libvirt_network
   libvirt_pool = var.libvirt_pool
   disk_size = var.disk_size
+  instance_name = var.instance_name["satellite"]
 }
 
 module "sso_instance" { 
@@ -78,4 +82,5 @@ module "sso_instance" {
   libvirt_network = var.libvirt_network
   libvirt_pool = var.libvirt_pool
   disk_size = var.disk_size
+  instance_name = var.instance_name["sso"]
 }
