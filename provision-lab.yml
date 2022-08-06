@@ -1,7 +1,7 @@
 - name: Download RHEL ISOs
   hosts: localhost
   vars_files:
-    - lab_vars.yml
+    - vars.yml
   tasks:
     - ansible.builtin.include_role:
         name: package-downloader
@@ -20,7 +20,7 @@
   hosts: localhost
   become: true
   vars_files:
-    - lab_vars.yml  
+    - vars.yml  
   tasks:
     - name: Ensure required packages are in place
       ansible.builtin.yum: 
