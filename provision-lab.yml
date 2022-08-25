@@ -12,9 +12,9 @@
         rh_api_offline_token: "{{ offline_token }}"
       loop:
         - filename: rhel8.iso
-          checksum: "{{ rhel.8.binary }}"
+          checksum: "{{ checksum.rhel8 }}"
         - filename: rhel9.iso
-          checksum: "{{ rhel.9.binary }}"
+          checksum: "{{ checksum.rhel9 }}"
       when: offline_token is defined and offline_token != ""
 
 - name: This play provisions VMs for Satellite demos
