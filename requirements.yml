@@ -9,7 +9,7 @@ roles:
     src: https://github.com/kubealex/role-package-downloader
   - name: host-provisioner
     src: https://github.com/kubealex/role-host-provisioner
-  - name: aap-setup
+  - name: aap2-setup
     src: https://github.com/kubealex/role-aap2-setup
   - name: idm-setup
     src: https://github.com/kubealex/role-idm-setup

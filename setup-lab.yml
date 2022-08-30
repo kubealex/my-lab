@@ -1,7 +1,16 @@
 ---
 - name: Set-up Ansible Automation Platform
   hosts: controller,hub
+  vars_files:
+    -vars.yml
   tasks:
+    - name: Include downloader role
+      ansible.builtin.include_role:
+        name: package-downloader
+      vars:
+        rh_product_checksum: "{{ checksum.aap2 }}"
+        rh_api_offline_token: "{{ offline_token }}"
+
     - name: Include setup role
       ansible.builtin.include_role:
         name: aap2-setup
