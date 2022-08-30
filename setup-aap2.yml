@@ -11,7 +11,7 @@
         rh_product_checksum: "{{ checksum.aap2 }}"
         rh_api_offline_token: "{{ offline_token }}"
 
-- name: Configure RHSM on nodes and download installer
+- name: Configure and install AAP on nodes
   hosts: controller,hub
   become: true
   vars_files:

@@ -41,3 +41,8 @@ rhsm_pool_id:
 rhsm_user:
 rhsm_password:
 network_cidr: 192.168.230.0/24
+
+install_aap2: true
+install_satellite: true
+install_sso: true
+install_idm: true
