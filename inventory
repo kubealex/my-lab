@@ -22,3 +22,12 @@ hub
 idm
 satellite
 sso
+
+[idm:vars]
+ipaserver_domain=rh-lab.labs
+ipaserver_realm=RH-LAB.LABS
+ipaserver_setup_dns=yes
+ipaserver_setup_adtrust=yes
+ipaserver_auto_forwarders=yes
+ipaadmin_password=admin123
+ipadm_password=admin123

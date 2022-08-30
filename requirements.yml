@@ -1,7 +1,17 @@
 ---
 collections:
-- community.general
-- ansible.posix
+  - community.general
+  - ansible.posix
+  - freeipa.ansible_freeipa
+
 roles:
-- name: package-downloader
-  src: https://github.com/kubealex/role-package-downloader
+  - name: package-downloader
+    src: https://github.com/kubealex/role-package-downloader
+  - name: host-provisioner
+    src: https://github.com/kubealex/role-host-provisioner
+  - name: aap-setup
+    src: https://github.com/kubealex/role-aap2-setup
+  - name: idm-setup
+    src: https://github.com/kubealex/role-idm-setup
+  - name: sat-setup
+    src: https://github.com/kubealex/role-sat-setup

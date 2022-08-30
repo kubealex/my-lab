@@ -1,0 +1,25 @@
+---
+- name: Set-up Ansible Automation Platform
+  hosts: controller,hub
+  tasks:
+    - name: Include setup role
+      ansible.builtin.include_role:
+        name: aap2-setup
+        apply:
+          become: true
+
+    - name: Install AAP2 controller
+      ansible.builtin.include_role:
+        name: aap2-setup
+        apply:
+          become: true
+      vars:
+        install_controller: true
+
+    - name: Install AAP2 automation hub
+      ansible.builtin.include_role:
+        name: aap2-setup
+        apply:
+          become: true
+      vars:
+        install_hub: true

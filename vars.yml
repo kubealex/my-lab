@@ -20,7 +20,7 @@ modules:
   - module: 02_hub_instance
     instance: automation-hub
     hostname: hub
-    version: rhel9    
+    version: rhel9
   - module: 03_satellite_instance
     instance: rhel8-satellite
     hostname: satellite
