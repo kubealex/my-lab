@@ -3,6 +3,13 @@
   hosts: sso
   become: true
   tasks:
+    - name: Register system with Red Hat Subscription Manager
+      community.general.redhat_subscription:
+        state: present
+        username: "{{ rhsm_user }}"
+        password: "{{ rhsm_password }}"
+        pool_ids: "{{ rhsm_pool_id }}"
+
     - name: Run SSO setup role
       ansible.builtin.include_role:
         name: sso-setup

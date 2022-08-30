@@ -3,6 +3,13 @@
   hosts: satellite
   become: true
   tasks:
+    - name: Register system with Red Hat Subscription Manager
+      community.general.redhat_subscription:
+        state: present
+        username: "{{ rhsm_user }}"
+        password: "{{ rhsm_password }}"
+        pool_ids: "{{ rhsm_pool_id }}"
+
     - name: Run Satellite setup role
       ansible.builtin.include_role:
         name: sat-setup
