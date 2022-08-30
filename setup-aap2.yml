@@ -17,12 +17,6 @@
   vars_files:
     - vars.yml
   tasks:
-    - name: Include setup role
-      ansible.builtin.include_role:
-        name: aap2-setup
-        apply:
-          become: true
-
     - name: Install AAP2 controller
       ansible.builtin.include_role:
         name: aap2-setup
