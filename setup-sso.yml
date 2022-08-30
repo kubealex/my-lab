@@ -6,7 +6,3 @@
     - name: Run SSO setup role
       ansible.builtin.include_role:
         name: sso-setup
-      vars:
-        rhsm_user: "{{ rhsm_user }}"
-        rhsm_password: "{{ rhsm_password }}"
-        rhsm_pool_id: "{{ rhsm_pool_id }}"
