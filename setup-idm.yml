@@ -2,6 +2,8 @@
 - name: IDM server configuration playbook
   hosts: idm
   become: true
+  vars_files:
+    - vars.yml
   tasks:
     - name: Register system with Red Hat Subscription Manager
       community.general.redhat_subscription:
