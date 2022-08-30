@@ -1,6 +1,6 @@
 ---
 - name: SSO server configuration playbook
-  hosts: ipaserver
+  hosts: sso
   become: true
   tasks:
     - name: Run SSO setup role

@@ -1,6 +1,6 @@
 ---
 - name: Satellite server configuration playbook
-  hosts: ipaserver
+  hosts: satellite
   become: true
   tasks:
     - name: Run Satellite setup role
