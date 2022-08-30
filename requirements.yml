@@ -15,3 +15,5 @@ roles:
     src: https://github.com/kubealex/role-idm-setup
   - name: sat-setup
     src: https://github.com/kubealex/role-sat-setup
+  - name: sso-setup
+    src: https://github.com/kubealex/role-sso-setup
