@@ -31,7 +31,7 @@ modules:
     version: rhel8
   - module: 05_rhel_instance
     instance: rhel
-    hostname: sso
+    hostname: rhel-server
     version: rhel8
 
 domain: rh-lab.labs
