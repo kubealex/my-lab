@@ -24,7 +24,8 @@ resource "libvirt_volume" "kickstart_image_rhel" {
 
 resource "libvirt_domain" "rhel-server" {
   autostart = true
-  name = var.instance_name != "" ? var.instance_name : var.hostname  memory = var.memory*1024
+  name = var.instance_name != "" ? var.instance_name : var.hostname
+  memory = var.memory*1024
   vcpu = var.cpu
 
   boot_device {
