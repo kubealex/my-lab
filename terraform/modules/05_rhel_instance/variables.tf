@@ -4,6 +4,12 @@ variable hostname {
   default     = "rhel-server"
 }
 
+variable instance_name {
+  type        = string
+  description = "Instance name of the VM"
+  default     = "rhel-server"
+}
+
 variable domain {
   type        = string
   description = "Domain for the virtual machine fqdn"
