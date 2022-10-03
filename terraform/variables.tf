@@ -13,6 +13,7 @@ variable instance_name {
     "sso" = "sso-lab"
     "idm" = "idm-lab"
     "satellite" = "satellite-lab"
+    "rhel" = "rhel-lab"
   }
 }
 
