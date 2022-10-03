@@ -30,9 +30,10 @@ modules:
     hostname: sso
     version: rhel8
   - module: 05_rhel_instance
-    instance: rhel8-sso
+    instance: rhel
     hostname: sso
     version: rhel8
+
 domain: rh-lab.labs
 
 checksum:
