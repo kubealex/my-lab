@@ -13,7 +13,7 @@ variable instance_name {
 variable domain {
   type        = string
   description = "Domain for the virtual machine fqdn"
-  default     = "aapdemo.labs"
+  default     = "rh-lab.labs"
 }
 
 variable memory {
@@ -37,13 +37,13 @@ variable kickstart_image {
 variable libvirt_network {
   type        = string
   description = "Name of libvirt network to be used for the VM"
-  default     = "aap-lab"
+  default     = "rh-lab"
 }
 
 variable libvirt_pool {
   type        = string
   description = "Name of libvirt pool to be used for the VM"
-  default     = "aap-lab"
+  default     = "rh-lab"
 }
 
 variable disk_size {
