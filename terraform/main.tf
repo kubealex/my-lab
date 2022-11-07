@@ -28,6 +28,7 @@ module "libvirt_resources" {
 module "idm_instance" {
   source = "./modules/01_idm_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.idm_setup)) ? 1 : 0
 
 # Variables
   domain = var.domain
@@ -40,6 +41,7 @@ module "idm_instance" {
 module "controller_instance" {
   source = "./modules/02_controller_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.aap2_controller_setup)) ? 1 : 0
 
 # Variables
   domain = var.domain
@@ -52,6 +54,7 @@ module "controller_instance" {
 module "hub_instance" {
   source = "./modules/02_hub_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.aap2_hub_setup)) ? 1 : 0
 
 # Variables
   domain = var.domain
@@ -64,6 +67,7 @@ module "hub_instance" {
 module "satellite_instance" {
   source = "./modules/03_satellite_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.satellite_setup)) ? 1 : 0
 
 # Variables
   domain = var.domain
@@ -76,6 +80,7 @@ module "satellite_instance" {
 module "sso_instance" {
   source = "./modules/04_sso_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.sso_setup)) ? 1 : 0
 
 # Variables
   domain = var.domain
@@ -88,6 +93,8 @@ module "sso_instance" {
 module "rhel_server" {
   source = "./modules/05_rhel_instance"
   depends_on = [module.libvirt_resources]
+  count = tobool(lower(var.rhel_setup)) ? 1 : 0
+
 
 # Variables
   domain = var.domain

@@ -46,3 +46,41 @@ variable libvirt_pool_path {
   description = "Path for libvirt pool definition"
   default     = "/var/lib/libvirt/images"
 }
+
+variable aap2_controller_setup {
+  type        = string
+  description = "Flag to enable AAP2 Setup"
+  default     = false
+}
+
+variable aap2_hub_setup {
+  type        = string
+  description = "Flag to enable AAP2 Setup"
+  default     = false
+}
+
+variable sso_setup {
+  type        = string
+  description = "Flag to enable SSO setup"
+  default     = false
+}
+
+variable satellite_setup {
+  type        = string
+  description = "Flag to enable Satellite setup"
+  default     = false
+}
+
+variable idm_setup {
+  type        = string
+  description = "Flag to enable IDM Setup"
+  default     = false
+}
+
+variable rhel_setup {
+  type        = string
+  description = "Flag to enable RHEL instance deployment"
+  default     = false
+}
+
+
