@@ -5,20 +5,16 @@
   tasks:
     - name: Include downloader role
       ansible.builtin.include_role:
-        name: checksum-helper
-
-    - name: Include downloader role
-      ansible.builtin.include_role:
         name: package-downloader
       vars:
         rh_product_filename: "{{ item.filename }}"
-        rh_product_checksum: "{{ item.checksum }}"
+        rh_product_name: "{{ item.product }}"
         rh_api_offline_token: "{{ offline_token }}"
       loop:
         - filename: rhel8.iso
-          checksum: "{{ checksum.rhel8 }}"
+          product: "rhel8"
         - filename: rhel9.iso
-          checksum: "{{ checksum.rhel9 }}"
+          product: "rhel9"
       when: offline_token is defined and offline_token != ""
 
 - name: This play provisions VMs for Satellite demos
