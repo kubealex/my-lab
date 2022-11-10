@@ -15,7 +15,9 @@
           product: "rhel8"
         - filename: rhel9.iso
           product: "rhel9"
-      when: offline_token is defined and offline_token != ""
+      when:
+        - offline_token is defined
+        - offline_token != ""
 
 - name: This play provisions VMs for Satellite demos
   hosts: vm_host
