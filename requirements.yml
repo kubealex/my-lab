@@ -17,3 +17,5 @@ roles:
     src: https://github.com/kubealex/role-sat-setup
   - name: sso-setup
     src: https://github.com/kubealex/role-sso-setup
+  - name: checksum-helper
+    src: https://github.com/kubealex/role-checksum-helper

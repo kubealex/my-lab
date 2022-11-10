@@ -5,6 +5,10 @@
   tasks:
     - name: Include downloader role
       ansible.builtin.include_role:
+        name: checksum-helper
+
+    - name: Include downloader role
+      ansible.builtin.include_role:
         name: package-downloader
       vars:
         rh_product_filename: "{{ item.filename }}"
