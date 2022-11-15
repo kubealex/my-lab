@@ -17,18 +17,12 @@
   vars_files:
     - vars.yml
   tasks:
-    - name: Install AAP2 controller
+    - name: Install AAP2
       ansible.builtin.include_role:
         name: aap2-setup
         apply:
           become: true
       vars:
         aap2_setup_controller: true
-
-    - name: Install AAP2 automation hub
-      ansible.builtin.include_role:
-        name: aap2-setup
-        apply:
-          become: true
-      vars:
         aap2_setup_hub: true
+        aap2_setup_servicecatalog: false
