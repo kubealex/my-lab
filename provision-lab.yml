@@ -33,12 +33,12 @@
         host_domain: "{{ domain }}"
         host_tf_vars:
           network_cidr: ' ["{{ network_cidr }}"]'
-          aap2_controller_setup: true
-          aap2_hub_setup: false
-          satellite_setup: false
-          sso_setup: false
-          idm_setup: false
-          rhel_setup: false
+          aap2_controller_setup: "{{ install_aap2 | default(false, true) }}"
+          aap2_hub_setup: "{{ install_aap2 | default(false, true) }}"
+          satellite_setup: "{{ install_satellite | default(false, true) }}"
+          sso_setup: "{{ install_sso | default(false, true) }}"
+          idm_setup: "{{ install_idm | default(false, true) }}"
+          rhel_setup: "{{ install_rhel | default(false, true) }}"
 
     - name: Ensure to clean known_hosts
       ansible.builtin.known_hosts:
