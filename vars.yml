@@ -8,3 +8,4 @@ install_aap2: true
 install_satellite: true
 install_sso: true
 install_idm: true
+install_rhel: true
