@@ -1,0 +1,19 @@
+- name: Include AAP2 setup tasks
+  ansible.builtin.import_playbook:
+    file: setup-aap2.yml
+  when: install_aap2
+
+- name: Include Satellite setup tasks
+  ansible.builtin.import_tasks:
+    file: setup-satellite.yml
+  when: install_satellite
+
+- name: Include SSO setup tasks
+  ansible.builtin.import_tasks:
+    file: setup-sso.yml
+  when: install_sso
+
+- name: Include SSO setup tasks
+  ansible.builtin.import_tasks:
+    file: setup-idm.yml
+  when: install_idm
