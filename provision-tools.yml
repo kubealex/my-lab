@@ -1,11 +1,11 @@
 - ansible.builtin.import_playbook: setup-aap2.yml
   when: install_aap2
 
-- ansible.builtin.import_tasks: setup-satellite.yml
+- ansible.builtin.import_playbook: setup-satellite.yml
   when: install_satellite
 
-- ansible.builtin.import_tasks: setup-sso.yml
+- ansible.builtin.import_playbook: setup-sso.yml
   when: install_sso
 
-- ansible.builtin.import_tasks: setup-idm.yml
+- ansible.builtin.import_playbook: setup-idm.yml
   when: install_idm
